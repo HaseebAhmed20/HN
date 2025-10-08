@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hainova Solutions - Innovating the Future</title>
+    <meta name="description" content="Hainova Solutions - Premium Web Development & Android Application Development Services">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.svg">
+    <link rel="apple-touch-icon" href="logo.svg">
+
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Binary Rain Background -->
+    <div class="binary-bg" id="binaryRain"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo3.png" alt="Hainova Solutions Logo" class="logo-image">
+                <div class="logo-text-container">
+                    <span class="logo-text">Hainova</span>
+                    <span class="logo-accent">Solutions</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="home" class="intro-section">
+        <canvas id="hero-canvas"></canvas>
+        <div class="intro-content">
+            <div class="logo-reveal">
+                <h1 class="main-logo">
+                    <span class="logo-word">Hainova</span>
+                    <span class="logo-word-accent">Solutions</span>
+                </h1>
+            </div>
+            <p class="tagline">Innovating the Future — Websites & Apps that Speak for You.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary magnetic-btn">Get Started</a>
+                <a href="#projects" class="btn btn-secondary magnetic-btn">View Our Work</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section tech-grid">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Who We Are</span>
+                <h2 class="section-title">Creative Digital Development Studio</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-card floating-card data-stream">
+                    <div class="circuit-lines"></div>
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Who We Are</h3>
+                    <p>A team of passionate developers and designers crafting digital experiences that transform businesses and engage users.</p>
+                    <div class="code-snippet" style="margin-top: 1rem; font-size: 0.75rem;">
+                        <span style="color: #8b5cf6;">const</span> team = <span style="color: #06b6d4;">"innovative"</span>;
+                    </div>
+                </div>
+
+                <div class="about-card floating-card holographic">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses with cutting-edge technology solutions that drive growth, innovation, and lasting success.</p>
+                    <div class="code-snippet" style="margin-top: 1rem; font-size: 0.75rem;">
+                        <span style="color: #8b5cf6;">function</span> <span style="color: #f472b6;">innovate</span>() { <span style="color: #06b6d4;">return</span> success; }
+                    </div>
+                </div>
+
+                <div class="about-card floating-card data-stream">
+                    <div class="circuit-lines"></div>
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Why Choose Us</h3>
+                    <p>Precision, Performance, and Perfection — We deliver solutions that exceed expectations and stand the test of time.</p>
+                    <div class="code-snippet" style="margin-top: 1rem; font-size: 0.75rem;">
+                        <span style="color: #8b5cf6;">if</span> (quality === <span style="color: #06b6d4;">"premium"</span>) deliver();
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section hex-pattern">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What We Do</span>
+                <h2 class="section-title">Our Services</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3>Web Development</h3>
+                            <p>Modern, responsive websites</p>
+                        </div>
+                        <div class="service-card-back">
+                            <h3>Web Development</h3>
+                            <p>Custom web applications built with the latest technologies. From landing pages to complex web platforms, we create fast, secure, and scalable solutions.</p>
+                            <ul class="service-features">
+                                <li>Responsive Design</li>
+                                <li>Modern Frameworks</li>
+                                <li>SEO Optimized</li>
+                                <li>Performance Focused</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <h3>Android Development</h3>
+                            <p>Native mobile applications</p>
+                        </div>
+                        <div class="service-card-back">
+                            <h3>Android Development</h3>
+                            <p>High-performance Android applications that deliver exceptional user experiences. Built with modern architecture and best practices.</p>
+                            <ul class="service-features">
+                                <li>Native Android</li>
+                                <li>Material Design</li>
+                                <li>Cloud Integration</li>
+                                <li>Offline Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                    <path d="M2 2l7.586 7.586"></path>
+                                    <circle cx="11" cy="11" r="2"></circle>
+                                </svg>
+                            </div>
+                            <h3>UI/UX Design</h3>
+                            <p>Beautiful, intuitive interfaces</p>
+                        </div>
+                        <div class="service-card-back">
+                            <h3>UI/UX Design</h3>
+                            <p>User-centered design that combines aesthetics with functionality. We create interfaces that users love and remember.</p>
+                            <ul class="service-features">
+                                <li>User Research</li>
+                                <li>Wireframing</li>
+                                <li>Prototyping</li>
+                                <li>Design Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <h3>Maintenance & Support</h3>
+                            <p>Ongoing care for your projects</p>
+                        </div>
+                        <div class="service-card-back">
+                            <h3>Maintenance & Support</h3>
+                            <p>Continuous support and updates to keep your applications running smoothly. We're here for you after launch.</p>
+                            <ul class="service-features">
+                                <li>24/7 Monitoring</li>
+                                <li>Regular Updates</li>
+                                <li>Bug Fixes</li>
+                                <li>Performance Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+
+            <div class="projects-tabs">
+                <button class="tab-btn active" data-tab="web">Web Projects</button>
+                <button class="tab-btn" data-tab="android">Android Apps</button>
+            </div>
+
+            <div class="projects-content">
+                <!-- Web Projects -->
+                <div class="tab-content active" id="web">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder web-gradient-1_2">
+                                    <img src="Elitestay.png" alt="TowSwift" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>EliteStay Hotel</h3>
+                                <p>A premium luxury hotel booking platform featuring elegant room showcases, seamless reservations, virtual tours, and personalized guest experiences with real-time availability.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">SQLite</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder web-gradient-2">
+                                    <img src="towswift.png" alt="TowSwift" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>TowSwift</h3>
+                                <p>On-demand towing service platform connecting vehicle owners with nearby tow trucks. Features GPS tracking, instant quotes, driver ratings, and emergency roadside assistance.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">js</span>
+                                    <span class="tech-tag">SQLite</span>
+                                    <span class="tech-tag">Google Maps</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder web-gradient-3">
+                                    <img src="dinehub.png" alt="Dinehub" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>DineHub</h3>
+                                <p>Revolutionary digital menu system for restaurants combining online ordering with in-house QR code menus. Features customizable layouts, real-time updates, and multi-language support like McDonald's.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">SQLite</span>
+                                    <span class="tech-tag">QR Code</span>
+                                    <span class="tech-tag">PWA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder web-gradient-4">
+                                    <img src="digital.png" alt="Digital Lost and found" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Digital Lost and Found Portal</h3>
+                                <p>Digital Lost & Found Portal is a smart-campus web system that helps users report, search, and recover lost or found items easily. It ensures secure item management with admin verification and real-time updates. The platform simplifies the recovery process and promotes trust within the campus community.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Django</span>
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Machine Learning</span>
+                                    <span class="tech-tag">Pandas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Android Projects -->
+                <div class="tab-content" id="android">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder app-gradient-1">
+                                    <img src="EasyBid.png" alt="EasyBid" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>EasyBid App</h3>
+                                <p>EasyBid is an online auction platform that allows users to bid, sell, and win products in real time. It ensures transparent, fair, and secure bidding with an easy-to-use interface for both buyers and sellers.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Kotlin</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Material Designs</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder app-gradient-mindflare">
+                                    <img src="mindflare.png" alt="MindFlare" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                                
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>MindFlare</h3>
+                                <p>Mindflare – Flashcards & MCQ Learning App is an Android-based study tool by Hainova Solutions that makes learning interactive through custom flashcards, MCQ quizzes, and progress tracking — all in a clean, user-friendly interface built with Kotlin and XML.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Kotlin</span>
+                                    <span class="tech-tag">Room DB</span>
+                                    <span class="tech-tag">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- New: Personal Diary -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder app-gradient-diary">
+                                    <!-- Notebook icon -->
+                                     <img src="personal_diary.png" alt="personal_diary" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Personal Diary</h3>
+                                <p>A simple, private diary app to capture daily thoughts with date-wise entries, search, and local backup.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Kotlin</span>
+                                    <span class="tech-tag">Room DB</span>
+                                    <span class="tech-tag">Material Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New: Habit Tracker -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <div class="project-placeholder app-gradient-habit">
+                                    <!-- Checkmark calendar icon -->
+                                      <img src="habit_tracker.png" alt="Habit" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;">
+                                
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Habit Tracker</h3>
+                                <p>Build positive routines with daily check-ins, streaks, and progress charts to stay consistent.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Kotlin</span>
+                                    <span class="tech-tag">LiveData</span>
+                                    <span class="tech-tag">Room DB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Hainova Difference</span>
+                <h2 class="section-title">Why Choose Us</h2>
+            </div>
+
+            <div class="comparison-container">
+                <div class="comparison-card">
+                    <div class="comparison-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Fully Customized Solutions</h3>
+                    <p>Every project is tailored to your unique needs. No templates, no shortcuts — just pure custom development.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Latest Tech Stack</h3>
+                    <p>We use cutting-edge technologies and frameworks to build future-proof applications that scale.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                            <path d="M2 2l7.586 7.586"></path>
+                            <circle cx="11" cy="11" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3>Modern UI/UX Design</h3>
+                    <p>Beautiful interfaces that users love. We combine aesthetics with usability for optimal engagement.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Agile development process ensures quick turnaround times without compromising on quality.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Maintenance Support</h3>
+                    <p>We don't disappear after launch. Ongoing support and updates keep your application running smoothly.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Client Collaboration</h3>
+                    <p>Transparent communication throughout the project. Your feedback shapes the final product.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How We Work</span>
+                <h2 class="section-title">Our Development Process</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-inner">1</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Discussion</h3>
+                        <p>We start by understanding your vision, goals, and requirements. Every detail matters.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-inner">2</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Design</h3>
+                        <p>Creating wireframes, mockups, and prototypes. Visualizing the final product before development.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-inner">3</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Development</h3>
+                        <p>Building your application with clean code, best practices, and modern technologies.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-inner">4</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Testing</h3>
+                        <p>Rigorous quality assurance to ensure everything works flawlessly across all devices.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-inner">5</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Launch</h3>
+                        <p>Deploying your application to production with proper monitoring and optimization.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-inner">6</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Support</h3>
+                        <p>Continuous maintenance, updates, and improvements to keep your application at its best.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <!-- Formspree helpers -->
+                        <input type="hidden" name="_subject" value="New message from Hainova Solutions">
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <button type="submit" class="btn btn-primary magnetic-btn">Send Message</button>
+                        
+                        <!-- Inline success message -->
+                        <div id="contactSuccess" class="form-success" role="status" aria-live="polite" aria-atomic="true" style="display:none;">
+                            <span class="success-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" opacity="0.4"></circle>
+                                    <polyline points="7 12.5 10 15.5 17 9" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                                </svg>
+                            </span>
+                            <span class="success-text">Thanks! Your message has been sent.</span>
+                        </div>
+                        
+                        <!-- Inline error message -->
+                        <div id="contactError" class="form-error" role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+                            <span class="error-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" opacity="0.4"></circle>
+                                    <line x1="8" y1="8" x2="16" y2="16" stroke-linecap="round"/>
+                                    <line x1="16" y1="8" x2="8" y2="16" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <span class="error-text">Sorry, we couldn't send your message. Please try again.</span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Email</h3>
+                        <p>hainovasolutions@gmail.com</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+92 311 4137651</p>
+                        <p>+92 319 4243649</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Model Town, Sialkot</p>
+                        <p>Punjab, Pakistan</p>
+                    </div>
+
+                    <div class="social-links">
+                        <!-- Facebook Icon -->
+                        <a href="https://www.facebook.com/share/1X5CnvVQCo/" class="social-link magnetic-btn" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <!-- Twitter/X Icon -->
+                        <a href="https://x.com/HainovaS?t=2t-uPmfR3DRDz-u_n5yo4g&s=08" class="social-link magnetic-btn" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <!-- YouTube Icon -->
+                        <a href="https://youtube.com/@thehainova?si=VChly3LmlF_3YK4i" class="social-link magnetic-btn" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram Icon -->
+                        <a href="https://www.instagram.com/thehainova?igsh=MXYxcHc3MmdwYjJhNQ%3D%3D&utm_source=qr" class="social-link magnetic-btn" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.svg" alt="Hainova Solutions" class="footer-logo-image">
+                    <h3>Hainova <span>Solutions</span></h3>
+                    <p>Innovating the Future</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Android Apps</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hainova Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/923114137651?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20Hainova%20Solutions%20services." id="whatsappLink" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+            </svg>
+            <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+        </a>
+    </div>
+</body>
+</html>
+
